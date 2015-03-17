@@ -1,2 +1,2 @@
 # SunPi
-Python script for streaming live data from a solar panel
+Python script for streaming live data to plot.ly from a solar panel by means of a raspberry pi
