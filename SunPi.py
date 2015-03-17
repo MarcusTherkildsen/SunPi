@@ -6,7 +6,7 @@ import plotly.plotly as py
 from plotly.graph_objs import Scatter, Layout, Figure, YAxis
 import numpy as np
 
-### SunPi script
+### SunPi script ###
 
 # Logging in to plotly
 username = 'your plotly username'
@@ -34,10 +34,11 @@ layout = Layout(
 
 fig = Figure(data=[trace1], layout=layout)
 
+# Comment out this line to keep old data in plot.ly plot (e.g. if yiu have to restart you raspberry pi and you want the data collection to continue from where it left of)
 print py.plot(fig, filename='SunPi wattage')
 
 # Open stream
-#sensor_pin = 0
+
 stream = py.Stream(stream_token)
 stream.open()
 
@@ -45,12 +46,16 @@ stream.open()
 # Initializing current sensor
 ina = INA219()
 
+# Adding 1 hour to datetime such that the time corresponds to local time here in Denmark
 add_hour = 1
 
 # Want 12 hours in plot. 200 points split over 12 hours (43200 sec) -> 43200/200 = 216 sec per point 
 avg_time_window = 216
+
+# Initializing arrays
 power_avg = np.empty(avg_time_window)
 for_avg_loop = xrange(avg_time_window)
+
 # Main sensor reading loop
 while True:
         #print
@@ -60,16 +65,18 @@ while True:
         #print "Power   : %.3f mW" % ina.getPower_mW()
 
 
-        # delay between stream posts
+        # Collecting avg_time_window - number of measurements seperated by approx. 1 sec
         for k in for_avg_loop:
-                power_avg[k] = -12*ina.getCurrent_mA()/1000#ina.getPower_mW()
-                print power_avg[k]
+                # Power in watt
+                power_avg[k] = (ina.getBusVoltage_V()+(ina.getShuntVoltage_mV()/1000)) * ina.getCurrent_mA()/1000
                 time.sleep(1)
-
+        
+        # Calculating mean value of the power
         sensor_data = np.mean(power_avg)
-        print
-        print 'sensor data ' + str(sensor_data)
+        
+        # Getting date for the plot
         added_hours = datetime.now() + timedelta(hours=add_hour)
-        #stream.write({'x': datetime.datetime.now().strftime(add_hour,'%Y-%m-%d %H:%M:%S.%f'), 'y': sensor_data})
+        
+        # Sending data to plot.ly
         stream.write({'x': format(added_hours,'%Y-%m-%d %H:%M:%S.%f'), 'y': sensor_data})
 
