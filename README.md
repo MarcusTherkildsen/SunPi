@@ -1,4 +1,4 @@
-# SunPi  - hej fede
+# SunPi 
 Python script for streaming live data to plot.ly from a solar panel by means of a raspberry pi.
 Live datafeed from SunPi here https://plot.ly/~marcus.therkildsen/15/sunpi-wattage/
 
