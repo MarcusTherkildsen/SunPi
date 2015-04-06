@@ -4,7 +4,7 @@ Live datafeed from SunPi here https://plot.ly/~marcus.therkildsen/221/sunpi/
 
 # Installing everything needed for the raspberry pi
 
-* Activate i2c from sudo raspi-config
++ Activate i2c from sudo raspi-config
 
 Go to sudo nano /etc/modules and add
 
