@@ -38,7 +38,7 @@ Live datafeed from SunPi here https://plot.ly/~marcus.therkildsen/221/sunpi/
   *https://github.com/scottjw/subfact_pi_ina219*
 
 
-*Install plotly 
+* Install plotly 
 
   *sudo apt-get install python-dev*
   
@@ -53,7 +53,7 @@ Live datafeed from SunPi here https://plot.ly/~marcus.therkildsen/221/sunpi/
   Open and transfer to SunPi
   remove adc stuff and insert username, api, token
 
-*To start script on boot 
+* To start script on boot 
 
   *sudo crontab -e*
 
