@@ -9,7 +9,6 @@ Live datafeed from SunPi here https://plot.ly/~marcus.therkildsen/221/sunpi/
   Go to sudo nano /etc/modules and add
 
   *i2c-bcm2708*
-  
   *i2c-dev*
 
 
