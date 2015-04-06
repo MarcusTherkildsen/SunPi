@@ -4,7 +4,7 @@ Live datafeed from SunPi here https://plot.ly/~marcus.therkildsen/221/sunpi/
 
 ## Installing everything needed for the raspberry pi
 
-* Configuring i2c required for the current sensors
+* **Configuring i2c required for the current sensors**
  
   Run
 
@@ -34,12 +34,12 @@ Live datafeed from SunPi here https://plot.ly/~marcus.therkildsen/221/sunpi/
   
   *sudo i2cdetect -y 1*
 
-* Download and move the files for the current sensor 
+* **Download and move the files for the current sensor** 
  
   *https://github.com/scottjw/subfact_pi_ina219*
 
 
-* Install plotly 
+* **Install plotly** 
 
   *sudo apt-get install python-dev*
   
@@ -54,7 +54,7 @@ Live datafeed from SunPi here https://plot.ly/~marcus.therkildsen/221/sunpi/
   Open and transfer to SunPi
   remove adc stuff and insert username, api, token
 
-* To start script on boot 
+* **To start script on boot** 
 
   *sudo crontab -e*
 
