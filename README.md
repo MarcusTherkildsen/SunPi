@@ -4,7 +4,7 @@ Live datafeed from SunPi here https://plot.ly/~marcus.therkildsen/221/sunpi/
 
 ## Installing everything needed for the raspberry pi
 
-* Configuring i2c required for the current sensors *
+* Configuring i2c required for the current sensors
  
   Run
 
@@ -59,6 +59,6 @@ Live datafeed from SunPi here https://plot.ly/~marcus.therkildsen/221/sunpi/
 
   and add 
 
-  *@reboot (sleep 10; python /home/pi/SunPi/SunPi_Test.py) &*
+  *@reboot (sleep 10; python /home/pi/SunPi/SunPi.py) &*
 
   (& makes it run in the background)
