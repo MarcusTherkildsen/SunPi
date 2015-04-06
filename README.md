@@ -4,7 +4,13 @@ Live datafeed from SunPi here https://plot.ly/~marcus.therkildsen/221/sunpi/
 
 ## Installing everything needed for the raspberry pi
 
-* Activate i2c from sudo raspi-config
+* Configuring i2c required for the current sensors *
+* 
+  Run
+
+  *sudo raspi-config*
+
+  and activate i2c
 
   Go to sudo nano /etc/modules and add
 
@@ -23,7 +29,6 @@ Live datafeed from SunPi here https://plot.ly/~marcus.therkildsen/221/sunpi/
   Restart and check if working 
   
   *lsmod | grep i2c_*
-
 
   Test hardware (remember to plug hardware in)
   
