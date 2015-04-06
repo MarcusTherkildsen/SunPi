@@ -35,6 +35,7 @@ Live datafeed from SunPi here https://plot.ly/~marcus.therkildsen/221/sunpi/
   *sudo i2cdetect -y 1*
 
 * Download and move the files for the current sensor 
+ 
   *https://github.com/scottjw/subfact_pi_ina219*
 
 
