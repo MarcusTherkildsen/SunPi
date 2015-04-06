@@ -5,7 +5,7 @@ Live datafeed from SunPi here https://plot.ly/~marcus.therkildsen/221/sunpi/
 ## Installing everything needed for the raspberry pi
 
 * Configuring i2c required for the current sensors *
-* 
+ 
   Run
 
   *sudo raspi-config*
