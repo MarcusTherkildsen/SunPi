@@ -41,7 +41,7 @@ Live datafeed from SunPi here http://mtherkildsen.dk/SunPi/
 
 * **Install plotly**
  
-  
+  Run these commands
 
       sudo apt-get install python-dev
   
