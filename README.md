@@ -56,6 +56,8 @@ Live datafeed from SunPi here http://mtherkildsen.dk/SunPi/
 
 * **To start script on boot** 
  
+  Open crontab
+
       sudo crontab -e
  
   and add 
