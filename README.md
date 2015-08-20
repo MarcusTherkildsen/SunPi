@@ -39,8 +39,10 @@ Live datafeed from SunPi here http://mtherkildsen.dk/SunPi/
   *https://github.com/scottjw/subfact_pi_ina219*
 
 
-* **Install plotly** 
+* **Install plotly**
  
+  Install python-dev
+
      sudo apt-get install python-dev
   
       sudo apt-get install python-pip
