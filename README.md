@@ -40,12 +40,12 @@ Live datafeed from SunPi here http://mtherkildsen.dk/SunPi/
 
 
 * **Install plotly** 
-
-      sudo apt-get install python-dev
+ 
+     sudo apt-get install python-dev
   
       sudo apt-get install python-pip
   
-      sudo pip install plotly 
+      sudo pip install plotly
 
   Grab a copy of the example file 
   
@@ -55,9 +55,9 @@ Live datafeed from SunPi here http://mtherkildsen.dk/SunPi/
   remove adc stuff and insert username, api, token
 
 * **To start script on boot** 
-
+ 
       sudo crontab -e
-
+ 
   and add 
 
       @reboot (sleep 10; python /home/pi/SunPi/SunPi.py) &
