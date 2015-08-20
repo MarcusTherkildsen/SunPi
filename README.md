@@ -1,6 +1,6 @@
 # SunPi 
 Python script for streaming live data to plot.ly from a solar panel by means of a raspberry pi.
-Live datafeed from SunPi here https://plot.ly/~marcus.therkildsen/221/sunpi/
+Live datafeed from SunPi here http://mtherkildsen.dk/SunPi/
 
 ## Installing everything needed for the raspberry pi
 
