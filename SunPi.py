@@ -5,13 +5,8 @@ from datetime import datetime, timedelta
 import plotly.plotly as py
 from plotly.graph_objs import Scatter, Layout, Figure, YAxis, Font, Marker
 import numpy as np
-import os
 from matplotlib.dates import date2num#,num2date
-from relay_funcs import ini_relay, all_off_relay, all_on_relay
 from expected_solar import *
-
-# Initialize relay (to off position)
-ini_relay()
 
 
 ### SunPi script
