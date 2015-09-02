@@ -30,7 +30,7 @@ def expected_solar():
     # url to get csv file from
     url_data = 'http://www.solartopo.com/services/solarOrbit.php?lat='+lat+'&long='+lon+'&date='+which_date+'&dst='+daylight_saving
 
-    #download csv fil, åben og hent tid og højden ud
+    #download csv file, open and get time and height
     cj = cookielib.CookieJar()
     opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
     request = urllib2.Request(url_data)
@@ -42,6 +42,7 @@ def expected_solar():
     sun_height_full = np.genfromtxt('sun_height.csv', delimiter=',', dtype='str',autostrip = True)[7:]
     sun_height_full = np.array([sun_height_full[i].split(';') for i in xrange(len(sun_height_full))])[:,:2]    
     
+    # Parse the datetime objects
     time_data = [dateutil.parser.parse(sun_height_full[i,0]) for i in xrange(len(sun_height_full[:,0]))]    
     sun_alti = sun_height_full[:,1].astype(float)
 
