@@ -191,13 +191,6 @@ while True:
     # When you want to go from these numbers to the original dates then use num2date
     time_for_saving[g] = date2num(added_hours)
 
-    # If battery is charged, switch relay on to run stuff
-    #print 'bat_vol_plotly is '+ str(bat_vol_plotly[g])
-    if bat_vol_plotly[g] > 13.6 and bat_vol_plotly[g-1] > 13.6 and bat_vol_plotly[g-2] > 13.6:
-        all_on_relay()
-    elif bat_vol_plotly[g] < 13 and bat_vol_plotly[g-1] < 13 and bat_vol_plotly[g-2] < 13:
-        all_off_relay()
-
     # Give loop some time to send the data to plotly in a consistent way
     # If exception: wait, reconnect
     try:
