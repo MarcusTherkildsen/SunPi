@@ -38,6 +38,7 @@ def expected_solar():
                 daylight_saving]
 
     # Download csv file, open and extract time and height
+
     cj = cookielib.CookieJar()
     opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
     request = urllib2.Request(url_data)
